@@ -4,6 +4,7 @@
 /* =========================
    HERO SECTION LAYOUT
 ========================= */
+
 .hero-container {
   display: flex;
   align-items: center;
@@ -115,10 +116,9 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    list-style: none;
     border: none;
     outline: none;
-    text-transform: capitalize;
+    text-transform: unset;
     
    
 }
@@ -859,12 +859,12 @@ position: relative;
    .job-entry { 
     margin-bottom: 45px; 
 } 
-.job-header { 
-    display: flex; 
-    justify-content: space-between;
-     align-items: flex-start; 
+.job-header {  
      margin-bottom: 8px; 
     } 
+    .job-dates{
+        margin-top: 0.4rem;
+    }
     .company-name { 
         font-size: 1.4rem; 
         font-weight: 700; 
@@ -884,7 +884,7 @@ position: relative;
     margin-bottom: 18px; 
 } /* Bullet Points */ 
     .job-bullets { 
-        list-style-type: disc; 
+        list-style-type: none; 
         padding-left: 20px; 
         margin: 0; 
     } 
@@ -894,3 +894,96 @@ position: relative;
         color: #000; /* Light gray text for readability */
         margin-bottom: 12px;
     }
+    .job-bullets li::marker {
+    color: #000;
+}
+/* EXPERIENCE */
+  #experience {
+    display: grid;
+    grid-template-columns: 1fr ;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .exp-left {
+    padding: 6rem 4rem;
+    border-right: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    height: fit-content;
+  }
+
+  .exp-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--purple);
+    
+  }
+
+  .exp-right {
+    padding: 6rem 4rem;
+  }
+
+  .exp-item {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    position: relative;
+  }
+
+  .exp-item:last-child { border-bottom: none; }
+
+  
+
+  .exp-company {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .exp-period {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--rust);
+    margin-top: 0.4rem;
+    margin-bottom: 18px;
+  }
+
+  .exp-role {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-top: 0.3rem;
+    margin-bottom: 18px;
+  }
+
+  .exp-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .job-bullets li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--warm-mid);
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .job-bullets > li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--rust);
+    font-size: 0.8rem;
+  }
+

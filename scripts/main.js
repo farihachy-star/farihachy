@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const menuBar = document.getElementById("menu_bar");
