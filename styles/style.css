@@ -750,6 +750,11 @@ position: relative;
   margin-bottom: .8em;
   color: var(--red);
 }
+.email > p{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--purple);
+}
 .email .card_paragraph a{
     font-size: 2em;
     font-weight: bold;
